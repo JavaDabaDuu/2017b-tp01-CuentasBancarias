@@ -7,5 +7,5 @@
 
 ## Estudiantes
 
-* XXX ([xxx](https://github.com/xxx))
-* XXX ([xxx](https://github.com/xxx))
+* Lucas Secchi ([Secchi1](https://github.com/secchi1))
+* Micaela Ramos ([RamosMicaela](https://github.com/ramosmicaela))

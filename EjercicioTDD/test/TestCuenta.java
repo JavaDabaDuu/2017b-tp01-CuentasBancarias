@@ -11,6 +11,6 @@ public class TestCuenta {
 	public void haceTransferencia() {
 		CuentaBancaria obj = new CuentaBancaria();
 		obj.realizarTransferencia();
-		Assert.assertEquals(3.5, obj.getMonto());
+		Assert.assertEquals(3.5, obj.getMonto(),0.001);
 	}
 }

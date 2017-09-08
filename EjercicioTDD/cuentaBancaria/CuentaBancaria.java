@@ -5,10 +5,10 @@ public class CuentaBancaria {
 	private long numCuenta;
 	
 	public void realizarTransferencia () {
-		this.monto = 3;
+		this.monto = 3.5;
 	}
 	
-	public int getMonto() {
+	public double getMonto() {
 		return this.monto;
 	}
 }

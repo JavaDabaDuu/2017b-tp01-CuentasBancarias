@@ -1,7 +1,7 @@
 package cuentaBancaria;
 
 public class CuentaBancaria {
-	private int monto;
+	private double monto;
 	private long numCuenta;
 	
 	public void realizarTransferencia () {

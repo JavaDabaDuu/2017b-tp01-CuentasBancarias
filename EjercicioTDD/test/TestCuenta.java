@@ -10,6 +10,7 @@ public class TestCuenta {
 	@Test
 	public void haceTransferencia() {
 		CuentaBancaria obj = new CuentaBancaria();
+		obj.realizarTransferencia();
 		Assert.assertEquals(3, obj.getMonto());
 	}
 }

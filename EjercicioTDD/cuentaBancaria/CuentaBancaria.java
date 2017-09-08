@@ -13,7 +13,7 @@ public class CuentaBancaria {
 		if (monto < 0) {
 			throw new IllegalArgumentException();
 		}
-		cuenta2.monto = monto;
+		cuenta2.monto += monto;
 	}
 	
 	public double getMonto() {

@@ -5,7 +5,7 @@ public class CuentaBancaria {
 	private long numCuenta;
 	
 	public void realizarTransferencia (double monto,CuentaBancaria cuenta2) {
-		cuenta2.monto = 5100;
+		cuenta2.monto = monto;
 	}
 	
 	public double getMonto() {

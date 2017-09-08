@@ -12,7 +12,7 @@ public class TestCuenta {
 		CuentaBancaria obj1 = new CuentaBancaria(15000);
 		CuentaBancaria obj2 = new CuentaBancaria(20000);
 		
-		obj1.realizarTransferencia(-5100, obj2);
-		Assert.assertEquals(-5100, obj2.getMonto(),0.001);
+		obj1.realizarTransferencia(15000, obj2);
+		Assert.assertEquals(35000, obj2.getMonto(),0.001);
 	}
 }

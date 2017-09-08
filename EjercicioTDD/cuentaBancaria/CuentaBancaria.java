@@ -4,12 +4,11 @@ public class CuentaBancaria {
 	private double monto;
 	private long numCuenta;
 	
-	
-	public CuentaBancaria (double m) {
-		this.monto = m;
+	public CuentaBancaria (double monto) {
+		this.monto = monto;
 	}
-	public void realizarTransferencia (double monto,CuentaBancaria cuenta2) {
-		
+	
+	public void realizarTransferencia (double monto,CuentaBancaria cuenta2) {		
 		if (monto < 0) {
 			throw new IllegalArgumentException();
 		}

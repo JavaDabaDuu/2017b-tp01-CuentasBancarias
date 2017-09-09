@@ -45,5 +45,11 @@ public class TestCuenta {
 		Assert.assertEquals(-500, obj2.getMonto(),0.001);
 	}
 	
+	@Test
+	public void encuentraCuentasIguales() {
+		CuentaBancaria obj = new CuentaBancaria(1234,25000);
+		Assert.assertTrue(obj.distintasCuentas(obj));
+	}
+	
 	
 }

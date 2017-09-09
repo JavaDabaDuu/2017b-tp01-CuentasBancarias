@@ -23,7 +23,18 @@ public class CuentaBancaria {
 		return monto<=this.monto;	
 	}
 	
+	public boolean distintasCuentas(CuentaBancaria cuenta2) {
+		if(cuenta2.getNroCuenta() != this.getNroCuenta())
+			return true;
+		
+		return false;
+	}
+	
 	public double getMonto() {
 		return this.monto;
+	}
+	
+	public long getNroCuenta() {
+		return this.numCuenta;
 	}
 }

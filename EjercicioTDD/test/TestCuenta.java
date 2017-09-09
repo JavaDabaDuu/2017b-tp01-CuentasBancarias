@@ -16,6 +16,15 @@ public class TestCuenta {
 		Assert.assertEquals(35000, obj2.getMonto(), 0.01);
 	}
 	
+	@Test
+	public void restaEnCuentaOrigen() {
+		CuentaBancaria obj = new CuentaBancaria(15000);
+		CuentaBancaria obj2 = new CuentaBancaria(20000);
+		
+		obj.realizarTransferencia(15000, obj2);
+		Assert.assertEquals(0, obj.getMonto(),0.1);
+	}
+	
 	@Test(expected = IllegalArgumentException.class)
 	public void fallaConNegativo() {
 		CuentaBancaria obj1 = new CuentaBancaria(15000);

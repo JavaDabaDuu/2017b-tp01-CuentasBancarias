@@ -13,6 +13,7 @@ public class CuentaBancaria {
 			throw new IllegalArgumentException();
 		}
 		cuenta2.monto += monto;
+		this.monto -=15000;
 	}
 	
 	public double getMonto() {

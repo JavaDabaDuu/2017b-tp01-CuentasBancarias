@@ -9,8 +9,8 @@ public class TestCuenta {
 	
 	@Test
 	public void haceTransferencia() {
-		CuentaBancaria obj = new CuentaBancaria(15000);
-		CuentaBancaria obj2 = new CuentaBancaria(20000);
+		CuentaBancaria obj = new CuentaBancaria(15000, 1234);
+		CuentaBancaria obj2 = new CuentaBancaria(20000, 12345);
 		
 		obj.realizarTransferencia(15000, obj2);
 		Assert.assertEquals(35000, obj2.getMonto(), 0.01);
@@ -18,8 +18,8 @@ public class TestCuenta {
 	
 	@Test
 	public void restaEnCuentaOrigen() {
-		CuentaBancaria obj = new CuentaBancaria(15000);
-		CuentaBancaria obj2 = new CuentaBancaria(20000);
+		CuentaBancaria obj = new CuentaBancaria(15000, 1234);
+		CuentaBancaria obj2 = new CuentaBancaria(20000, 12345);
 		
 		obj.realizarTransferencia(15000, obj2);
 		Assert.assertEquals(0, obj.getMonto(),0.1);
@@ -30,7 +30,7 @@ public class TestCuenta {
 	
 	@Test
 	public void esMontoSuficiente() {
-		CuentaBancaria obj = new CuentaBancaria(15000);
+		CuentaBancaria obj = new CuentaBancaria(15000, 1234);
 		
 		 Assert.assertFalse(obj.esMontoSuficiente(15100));
 		 Assert.assertTrue(obj.esMontoSuficiente(15000));
@@ -38,8 +38,8 @@ public class TestCuenta {
 	
 	@Test(expected = IllegalArgumentException.class)
 	public void fallaConNegativo() {
-		CuentaBancaria obj1 = new CuentaBancaria(15000);
-		CuentaBancaria obj2 = new CuentaBancaria(2000);
+		CuentaBancaria obj1 = new CuentaBancaria(15000, 1234);
+		CuentaBancaria obj2 = new CuentaBancaria(2000, 12345);
 		
 		obj1.realizarTransferencia(-15000, obj2);
 		Assert.assertEquals(-500, obj2.getMonto(),0.001);
@@ -50,8 +50,8 @@ public class TestCuenta {
 		CuentaBancaria obj = new CuentaBancaria(1234,25000);
 		CuentaBancaria obj2 = new CuentaBancaria(12345,10000);
 	
-		Assert.assertFalse(obj.distintasCuentas(obj));
-		Assert.assertTrue(obj.distintasCuentas(obj2));
+		Assert.assertFalse(obj.sonDistintasCuentas(obj));
+		Assert.assertTrue(obj.sonDistintasCuentas(obj2));
 	}
 	
 	

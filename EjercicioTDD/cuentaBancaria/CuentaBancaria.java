@@ -9,16 +9,12 @@ public class CuentaBancaria {
 		this.nroCuenta = nroCuenta;
 	}
 
-	public CuentaBancaria(double monto) {
-		this.monto = monto;
-	}
-
 	public void realizarTransferencia(double monto, CuentaBancaria cuenta2) {
 		if (monto < 0) {
 			throw new IllegalArgumentException();
 		}
 
-		if (this.esMontoSuficiente(monto)) {
+		if (this.esMontoSuficiente(monto) && this.sonDistintasCuentas(cuenta2)) {
 			cuenta2.monto += monto;
 			this.monto -= monto;
 		}
@@ -28,7 +24,7 @@ public class CuentaBancaria {
 		return monto <= this.monto;
 	}
 
-	public boolean distintasCuentas(CuentaBancaria cuenta2) {
+	public boolean sonDistintasCuentas(CuentaBancaria cuenta2) {
 		return this.nroCuenta != cuenta2.getNroCuenta();
 	}
 

@@ -17,7 +17,12 @@ public class CuentaBancaria {
 	}
 	
 	public boolean esMontoSuficiente(double monto) {
-		return false;
+		
+		if (monto > this.monto) {
+			return false;
+		}
+		return true;
+		
 	}
 	
 	public double getMonto() {

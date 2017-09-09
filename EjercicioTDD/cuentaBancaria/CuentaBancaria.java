@@ -29,10 +29,7 @@ public class CuentaBancaria {
 	}
 
 	public boolean distintasCuentas(CuentaBancaria cuenta2) {
-		if (cuenta2.getNroCuenta() != this.getNroCuenta())
-			return true;
-
-		return false;
+		return this.nroCuenta != cuenta2.getNroCuenta();
 	}
 
 	public double getMonto() {

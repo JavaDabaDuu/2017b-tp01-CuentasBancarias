@@ -12,8 +12,11 @@ public class CuentaBancaria {
 		if (monto < 0) {
 			throw new IllegalArgumentException();
 		}
-		cuenta2.monto += monto;
-		this.monto -= monto;
+		
+		if(this.esMontoSuficiente(monto)) {
+			cuenta2.monto += monto;
+			this.monto -= monto;
+		}
 	}
 	
 	public boolean esMontoSuficiente(double monto) {

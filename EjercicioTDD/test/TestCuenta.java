@@ -50,7 +50,7 @@ public class TestCuenta {
 		CuentaBancaria obj = new CuentaBancaria(1234,25000);
 		CuentaBancaria obj2 = new CuentaBancaria(12345,10000);
 	
-		Assert.assertTrue(obj.distintasCuentas(obj));
+		Assert.assertFalse(obj.distintasCuentas(obj));
 		Assert.assertTrue(obj.distintasCuentas(obj2));
 	}
 	

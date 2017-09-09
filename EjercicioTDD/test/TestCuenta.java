@@ -33,6 +33,7 @@ public class TestCuenta {
 		CuentaBancaria obj = new CuentaBancaria(15000);
 		
 		 Assert.assertFalse(obj.esMontoSuficiente(15100));
+		 Assert.assertTrue(obj.esMontoSuficiente(15000));
 	}
 	
 	@Test(expected = IllegalArgumentException.class)
